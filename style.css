@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  flex-direction: column;
+}
+
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+.counterContainer button {
+  padding: 5px 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.calcultor_grid {
+  position: relative;
+  /* min-width: 300px; */
+  /* min-height: 400px; */
+  padding: 20px;
+  border-radius: 20px;
+  background: #333;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 25px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.calcultor_grid .calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 7px;
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px);
+}
+.calcultor_grid .calculator .outPut {
+  grid-column: 1 / -1;
+}
+
+.calculator button {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+  box-shadow: inset -8px 0px 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: whitesmoke;
+  font-style: normal;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.calculator button::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  border-radius: 10px;
+  /* background: linear-gradient(90deg, #2d2d2d, #4d4d4d); */
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+
+.span {
+  grid-column: span 2;
+}
+
+.span:nth-child(1) {
+  background: linear-gradient(90deg, #ad2b2b, #300a0a);
+}
+
+.outPut {
+  background: #a7af7c;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 6px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.calculator .clear {
+  background: red;
+}
+.calculator .equal {
+  background: #2196f3;
+}
+
+.currentOperation {
+  font-weight: 400;
+  font-size: 1.6em;
+}

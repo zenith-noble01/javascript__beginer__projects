@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz app</title>
+  </head>
+  <body>
+    <div class="container" id="containerElem">
+      <div class="quiz" id="quiz">
+        <h2 id="questionEl">Question here!</h2>
+        <ul>
+          <li>
+            <input type="radio" name="" id="a" class="answerElem"> 
+            <label id="a_text">zenith noble is here!</label>
+          </li>
+          <li>
+            <input type="radio" name="" id="b" class="answerElem"> 
+            <label id="b_text">zenith noble is here!</label>
+          </li>
+          <li>
+            <input type="radio" name="" id="c" class="answerElem"> 
+            <label id="c_text">zenith noble is here!</label>
+          </li>
+          <li>
+            <input type="radio" name="" id="d" class="answerElem"> 
+            <label id="d_text">zenith noble is here!</label>
+          </li>
+        </ul>
+        <button id="submit">submit</button>
+      </div>
+      <div class="popup" id="popup">
+        <div class="container__popup">
+          <button class="close" id="close">
+            close
+          </button>
+          <p>Opps you need to select an answer before going to the next question!!</p>
+        </div>
+      </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
